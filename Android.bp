@@ -1,7 +1,6 @@
 cc_library {
     name: "libarm-optimized-routines",
     host_supported: true,
-    recovery_available: true,
     cflags: [
         "-Werror",
         "-O2",
@@ -55,9 +54,6 @@ cc_library {
         },
     },
     stl: "none",
-    static: {
-        system_shared_libs: [],
-    },
 }
 
 // adb shell "/data/nativetest64/mathtest/mathtest /data/nativetest64/mathtest/test/testcases/directed/*"
