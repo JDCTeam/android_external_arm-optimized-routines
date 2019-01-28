@@ -45,22 +45,4 @@ cc_library {
     stl: "none",
 }
 
-// adb shell "/data/nativetest64/mathtest/mathtest /data/nativetest64/mathtest/test/testcases/directed/*"
-// adb shell "/data/nativetest/mathtest/mathtest /data/nativetest/mathtest/test/testcases/directed/*"
-cc_test {
-    name: "mathtest",
-    gtest: false,
-    host_supported: true,
-    cflags: ["-Werror", "-Wno-missing-braces"],
-    srcs: [
-      "math/single/e_rem_pio2.c",
-      "test/mathtest.c"
-    ],
-    data: ["test/testcases/directed/*.tst"],
-    local_include_dirs: ["math/include"],
-    target:
-        linux_bionic: {
-            enabled: true,
-        },
-    },
-}
+
